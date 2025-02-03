@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indicação de Pacientes - Clínica Médica</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Você pode adicionar seu CSS aqui -->
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Cadastre sua indicação e ganhe recompensas!</h1>
+        <p>Indique pacientes para nossa clínica e ganhe benefícios exclusivos.</p>
+    </header>
+
+    <section class="form-section" >
+        <h2>Cadastre-se e indique pacientes:</h2>
+        <form id="viral-loops-form" class="form-container">
+            <div class="form-group">
+                <label for="name">Nome Completo:</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Telefone (Opcional):</label>
+                <input type="tel" id="phone" name="phone" class="form-control">
+            </div>
+            <button type="submit" class="btn-submit">Cadastrar Indicação</button>
+        </form>
+    </section>
+
+    <footer>
+        
+        <p>© 2025 Clínica Exemplo - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.viral-loops.com/js/vl.js"></script>
+    <script>
+        window.vl = window.vl || [];
+        vl.push(['init', {
+            "campaign": 'your-campaign-id', // Substitua pelo ID da sua campanha
+            "source": 'landing-page', // Nome da fonte de onde a indicação vem
+        }]);
+    </script>
+</body>
+</html>

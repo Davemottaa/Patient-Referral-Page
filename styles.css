@@ -1,0 +1,140 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(clinica.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #333;
+}
+
+.navbar {
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0); /* Fundo semi-transparente */
+    bottom: 880px;
+}
+
+.navbar .logo {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    flex: 1;
+    justify-content: center;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #76bfac;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    text-align: center;
+}
+
+.nav-links a:hover {
+    color: #68a797;
+}
+
+header {
+    background-color: #76bfac;
+    color: white;
+    text-align: center;
+    padding: 50px 20px 50px; /* Ajuste o padding para compensar a navbar fixa */
+    border-radius: 500px;
+    margin-top: 70px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+header p {
+    font-size: 18px;
+    margin: 10px 0 0;
+}
+
+.form-section {
+    padding: 40px;
+    max-width: max-content;
+    margin: 40px auto;
+    background-color: rgba(255, 255, 255, 33%);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #0072f5;
+    text-align: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #0072f5;
+    outline: none;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background-color: #0072f5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #005bb5;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #76bfac;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
