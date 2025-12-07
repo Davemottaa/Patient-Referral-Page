@@ -9,66 +9,24 @@ body {
     color: #333;
 }
 
-.navbar {
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    background-color: rgba(255, 255, 255, 0); /* Fundo semi-transparente */
-    bottom: 880px;
-}
 
-.navbar .logo {
-    height: 50px;
-}
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    flex: 1;
-    justify-content: center;
-}
-
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #76bfac;
-    font-size: 18px;
-    transition: color 0.3s ease;
-    text-align: center;
-}
-
-.nav-links a:hover {
-    color: #68a797;
-}
 
 header {
     background-color: #76bfac;
     color: white;
     text-align: center;
-    padding: 50px 20px 50px; /* Ajuste o padding para compensar a navbar fixa */
-    border-radius: 500px;
-    margin-top: 70px;
+    padding: 20px;
 }
 
-header h1 {
-    font-size: 36px;
-    margin: 0;
-}
+
 
 header p {
     font-size: 18px;
-    margin: 10px 0 0;
 }
 
 .form-section {
     padding: 40px;
-    max-width: max-content;
     margin: 40px auto;
     background-color: rgba(255, 255, 255, 33%);
     border-radius: 8px;
@@ -130,11 +88,9 @@ header p {
 
 footer {
     text-align: center;
-    padding: 20px;
     background-color: #76bfac;
     color: white;
     position: fixed;
     width: 100%;
     bottom: 0;
 }
-
