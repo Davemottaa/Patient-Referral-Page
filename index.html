@@ -1,43 +1,174 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indicação de Pacientes - Clínica Médica</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Você pode adicionar seu CSS aqui -->
+    <title>Associação Ermelino Matarazzo de Apoio Regional</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header class="hero" id="topo">
+        <nav class="navbar">
+            <a href="#topo" class="brand">
+                <img src="logo.jpg" alt="Logo da associação" class="brand-logo">
+                <span>Associação Ermelino Matarazzo de Apoio Regional</span>
+            </a>
+            <div class="nav-links">
+                <a href="#missao">Nossa Missão</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#cadastro">Cadastro na Associação</a>
+                <a href="#doar">Doar</a>
+            </div>
+        </nav>
 
-    <header>
-        <h1>Cadastre sua indicação e ganhe recompensas!</h1>
-        <p>Indique cliente para nossa clínica e ganhe benefícios exclusivos.</p>
+        <div class="hero-content">
+            <div class="hero-copy">
+                <p class="eyebrow">Acolhimento, desenvolvimento e oportunidade</p>
+                <h1>Cadastro de crianças e adolescentes para participar da associação</h1>
+                <p class="hero-text">
+                    A Associação Ermelino Matarazzo de Apoio Regional atua no apoio a famílias,
+                    no fortalecimento comunitário e na ampliação de oportunidades para crianças e adolescentes.
+                </p>
+                <div class="hero-actions">
+                    <a href="#cadastro" class="btn btn-primary">Fazer cadastro</a>
+                    <a href="https://www.instagram.com/associacaoamar2025/" target="_blank" rel="noreferrer" class="btn btn-secondary">Instagram</a>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <section class="form-section" >
-        <h2>Cadastre-se e indique pacientes:</h2>
-        <form id="viral-loops-form" class="form-container">
-            <div class="form-group">
-                <label for="name">Nome Completo:</label>
-                <input type="text" id="name" name="name" class="form-control" required>
+    <main>
+        <section class="info-section" id="missao">
+            <div class="section-heading">
+                <p class="section-kicker">Nossa Missão</p>
+                <h2>Promover apoio regional com foco em cuidado, educação e inclusão</h2>
             </div>
-            <div class="form-group">
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" class="form-control" required>
+            <div class="cards">
+                <article class="card">
+                    <h3>Acolhimento familiar</h3>
+                    <p>Atendimento inicial para orientar famílias e organizar o ingresso de crianças e adolescentes nas atividades da associação.</p>
+                </article>
+                <article class="card">
+                    <h3>Desenvolvimento social</h3>
+                    <p>Iniciativas que incentivam convivência, cidadania, acesso a direitos e participação ativa na comunidade.</p>
+                </article>
+                <article class="card">
+                    <h3>Oportunidades contínuas</h3>
+                    <p>Projetos e ações pensados para ampliar vivências educativas, culturais e esportivas com acompanhamento responsável.</p>
+                </article>
             </div>
-            <div class="form-group">
-                <label for="phone">Telefone (Opcional):</label>
-                <input type="tel" id="phone" name="phone" class="form-control">
-            </div>
-            <button type="submit" class="btn-submit">Cadastrar Indicação</button>
-        </form>
-    </section>
+        </section>
 
-    <footer>
-        
-        <p>© 2025 Clínica Exemplo - Todos os direitos reservados.</p>
+        <section class="info-section alt-section" id="projetos">
+            <div class="section-heading">
+                <p class="section-kicker">Projetos</p>
+                <h2>Frentes de atuação da associação</h2>
+            </div>
+            <div class="project-grid">
+                <article class="project-card">
+                    <span>01</span>
+                    <h3>Atividades educativas</h3>
+                    <p>Espaços de reforço, leitura, oficinas e apoio ao desenvolvimento das crianças e adolescentes.</p>
+                </article>
+                <article class="project-card">
+                    <span>02</span>
+                    <h3>Esporte e convivência</h3>
+                    <p>Práticas coletivas que incentivam disciplina, integração social e bem-estar.</p>
+                </article>
+                <article class="project-card">
+                    <span>03</span>
+                    <h3>Apoio às famílias</h3>
+                    <p>Cadastro social e organização de informações essenciais para contato, validação e participação.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="form-section" id="cadastro">
+            <div class="section-heading">
+                <p class="section-kicker">Cadastro na Associação</p>
+                <h2>Preencha os dados para solicitar participação</h2>
+                <p class="section-text">Os campos marcados como obrigatórios ajudam na identificação da família e validação do cadastro.</p>
+            </div>
+
+            <form id="association-form" class="form-container">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="child-name">Nome da criança ou adolescente</label>
+                        <input type="text" id="child-name" name="child-name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="child-birth">Data de nascimento da criança ou adolescente</label>
+                        <input type="date" id="child-birth" name="child-birth" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="responsible-name">Nome do responsável familiar (RF)</label>
+                        <input type="text" id="responsible-name" name="responsible-name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mother-name">Nome da mãe</label>
+                        <input type="text" id="mother-name" name="mother-name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cpf">CPF</label>
+                        <input type="text" id="cpf" name="cpf" class="form-control" inputmode="numeric" placeholder="000.000.000-00" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rg">RG</label>
+                        <input type="text" id="rg" name="rg" class="form-control" placeholder="00.000.000-0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="birth-date">Data de nascimento do RF</label>
+                        <input type="date" id="birth-date" name="birth-date" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="marital-status">Estado civil</label>
+                        <select id="marital-status" name="marital-status" class="form-control" required>
+                            <option value="">Selecione</option>
+                            <option value="solteiro(a)">Solteiro(a)</option>
+                            <option value="casado(a)">Casado(a)</option>
+                            <option value="uniao-estavel">União estável</option>
+                            <option value="divorciado(a)">Divorciado(a)</option>
+                            <option value="viuvo(a)">Viúvo(a)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefone para contato</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" placeholder="(11) 99999-9999" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="responsavel@email.com" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="address">Endereço</label>
+                        <input type="text" id="address" name="address" class="form-control" placeholder="Rua, número, bairro e complemento">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="notes">Observações importantes</label>
+                        <textarea id="notes" name="notes" class="form-control" rows="4" placeholder="Informe alguma necessidade específica ou detalhe relevante para o atendimento."></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-submit">Enviar cadastro</button>
+                <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="donation-section" id="doar">
+            <div>
+                <p class="section-kicker">Doar</p>
+                <h2>Fortaleça a associação com sua contribuição</h2>
+                <p>
+                    Sua ajuda apoia atividades, acolhimento e manutenção dos projetos desenvolvidos para as famílias da região.
+                </p>
+            </div>
+            <a href="https://www.instagram.com/associacaoamar2025/" target="_blank" rel="noreferrer" class="btn btn-primary">Entrar em contato para doar</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Associação Ermelino Matarazzo de Apoio Regional. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="scripts.js">
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>

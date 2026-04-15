@@ -1,25 +1,36 @@
-document.getElementById('viral-loops-form').addEventListener('submit', function(e) {
-    e.preventDefault();
+const form = document.getElementById("association-form");
+const feedback = document.getElementById("form-feedback");
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
+if (form) {
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
 
-    // Verificar se o nome e o e-mail são preenchidos
-    if (!name || !email) {
-        alert('Por favor, preencha todos os campos obrigatórios!');
-        return;
-    }
+        const requiredFields = [
+            "child-name",
+            "child-birth",
+            "responsible-name",
+            "mother-name",
+            "cpf",
+            "rg",
+            "birth-date",
+            "marital-status",
+            "phone",
+            "email"
+        ];
 
-    // Enviar os dados para o Viral Loops
-    window.vl.push(['add_lead', {
-        'name': name,
-        'email': email,
-        'phone': phone,
-        'source': 'landing-page', // Nome da fonte
-    }]);
+        const missingField = requiredFields.find((fieldId) => {
+            const field = document.getElementById(fieldId);
+            return !field || !field.value.trim();
+        });
 
-    // Exibir mensagem de sucesso ou erro
-    alert('Cadastro realizado com sucesso! Você será notificado em breve.');
-    document.getElementById('viral-loops-form').reset(); // Limpar o formulário após o envio
-});
+        if (missingField) {
+            feedback.textContent = "Preencha todos os campos obrigatórios para concluir o cadastro.";
+            feedback.style.color = "#a63f1e";
+            return;
+        }
+
+        feedback.textContent = "Cadastro enviado com sucesso. Em breve entraremos em contato.";
+        feedback.style.color = "#174f44";
+        form.reset();
+    });
+}
