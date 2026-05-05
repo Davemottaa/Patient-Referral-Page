@@ -319,6 +319,39 @@ textarea.form-control {
     min-height: 110px;
 }
 
+.security-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.consent-group {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px 16px;
+    border: 1px solid rgba(31, 111, 95, 0.18);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.72);
+}
+
+.consent-group input {
+    width: 18px;
+    height: 18px;
+    margin: 2px 0 0;
+    accent-color: var(--primary);
+}
+
+.consent-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.45;
+    color: var(--text);
+}
+
 .btn-submit {
     align-self: flex-start;
     min-width: 220px;
@@ -330,6 +363,13 @@ textarea.form-control {
     font-family: Arial, sans-serif;
     font-weight: 700;
     color: var(--primary-dark);
+}
+
+.form-note {
+    margin: -8px 0 0;
+    font-family: Arial, sans-serif;
+    font-size: 0.95rem;
+    color: var(--muted);
 }
 
 .donation-section {

@@ -90,11 +90,16 @@
                 <p class="section-text">Os campos marcados como obrigatórios ajudam na identificação da família e validação do cadastro.</p>
             </div>
 
-            <form id="association-form" class="form-container">
+            <form id="association-form" class="form-container" data-google-script-url="https://script.google.com/macros/s/AKfycbyWWQyKN3EelwBPtzUOx_pfX0k9kE61NRPFxbauQaRnSYfylletVEJP8jg3Ulyucj7c/exec">
+                <input type="hidden" id="form-started-at" name="form-started-at" value="">
+                <div class="form-group security-field" aria-hidden="true">
+                    <label for="website">Site</label>
+                    <input type="text" id="website" name="website" class="form-control" tabindex="-1" autocomplete="off">
+                </div>
                 <div class="form-grid">
                     <div class="form-group">
                         <label for="child-name">Nome da criança ou adolescente</label>
-                        <input type="text" id="child-name" name="child-name" class="form-control" required>
+                        <input type="text" id="child-name" name="child-name" class="form-control" maxlength="120" autocomplete="name" required>
                     </div>
                     <div class="form-group">
                         <label for="child-birth">Data de nascimento da criança ou adolescente</label>
@@ -102,19 +107,19 @@
                     </div>
                     <div class="form-group">
                         <label for="responsible-name">Nome do responsável familiar (RF)</label>
-                        <input type="text" id="responsible-name" name="responsible-name" class="form-control" required>
+                        <input type="text" id="responsible-name" name="responsible-name" class="form-control" maxlength="120" autocomplete="name" required>
                     </div>
                     <div class="form-group">
                         <label for="mother-name">Nome da mãe</label>
-                        <input type="text" id="mother-name" name="mother-name" class="form-control" required>
+                        <input type="text" id="mother-name" name="mother-name" class="form-control" maxlength="120" autocomplete="name" required>
                     </div>
                     <div class="form-group">
                         <label for="cpf">CPF</label>
-                        <input type="text" id="cpf" name="cpf" class="form-control" inputmode="numeric" placeholder="000.000.000-00" required>
+                        <input type="text" id="cpf" name="cpf" class="form-control" inputmode="numeric" placeholder="000.000.000-00" maxlength="14" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" required>
                     </div>
                     <div class="form-group">
                         <label for="rg">RG</label>
-                        <input type="text" id="rg" name="rg" class="form-control" placeholder="00.000.000-0" required>
+                        <input type="text" id="rg" name="rg" class="form-control" placeholder="00.000.000-0" maxlength="20" pattern="[0-9A-Za-z.\- ]{5,20}" required>
                     </div>
                     <div class="form-group">
                         <label for="birth-date">Data de nascimento do RF</label>
@@ -133,23 +138,30 @@
                     </div>
                     <div class="form-group">
                         <label for="phone">Telefone para contato</label>
-                        <input type="tel" id="phone" name="phone" class="form-control" placeholder="(11) 99999-9999" required>
+                        <input type="tel" id="phone" name="phone" class="form-control" placeholder="(11) 99999-9999" maxlength="20" autocomplete="tel" required>
                     </div>
                     <div class="form-group">
                         <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" class="form-control" placeholder="responsavel@email.com" required>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="responsavel@email.com" maxlength="120" autocomplete="email" required>
                     </div>
                     <div class="form-group full-width">
                         <label for="address">Endereço</label>
-                        <input type="text" id="address" name="address" class="form-control" placeholder="Rua, número, bairro e complemento">
+                        <input type="text" id="address" name="address" class="form-control" placeholder="Rua, número, bairro e complemento" maxlength="180" autocomplete="street-address">
                     </div>
                     <div class="form-group full-width">
                         <label for="notes">Observações importantes</label>
-                        <textarea id="notes" name="notes" class="form-control" rows="4" placeholder="Informe alguma necessidade específica ou detalhe relevante para o atendimento."></textarea>
+                        <textarea id="notes" name="notes" class="form-control" rows="4" maxlength="600" placeholder="Informe alguma necessidade específica ou detalhe relevante para o atendimento."></textarea>
+                    </div>
+                    <div class="form-group full-width consent-group">
+                        <input type="checkbox" id="lgpd-consent" name="lgpd-consent" value="Autorizado" required>
+                        <label for="lgpd-consent">
+                            Autorizo a Associação Ermelino Matarazzo de Apoio Regional a coletar e armazenar os dados informados neste formulário para fins de cadastro, contato, validação e acompanhamento da participação da criança ou adolescente nas atividades da associação.
+                        </label>
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary btn-submit">Enviar cadastro</button>
                 <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
+                <p class="form-note">O cadastro será salvo em uma planilha do Google Sheets acessível somente pela equipe autorizada.</p>
             </form>
         </section>
 
